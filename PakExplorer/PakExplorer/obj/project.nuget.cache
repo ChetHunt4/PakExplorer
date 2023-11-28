@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "foobgj1gBFEZ//Qtk9DkX0TpnSeedvxAf2B+i11rmkpFccpUMuKVogzAjb2gb6jOWPuFeW/UY/dIbQxbr3sESQ==",
+  "dgSpecHash": "EW2bpO5M8RdJjtyoV5a92zdYgnUobc/j6waTc0UzsZraAd6x7IdqVCHQj2uxfXzGmWXbMExdPVN9FoC1TsLpMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\cheth\\source\\repos\\PakExplorer\\PakExplorer\\PakExplorer\\PakExplorer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\cheth\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\cheth\\.nuget\\packages\\skiasharp\\2.88.6\\skiasharp.2.88.6.nupkg.sha512",
+    "C:\\Users\\cheth\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.6\\skiasharp.nativeassets.macos.2.88.6.nupkg.sha512",
+    "C:\\Users\\cheth\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.6\\skiasharp.nativeassets.win32.2.88.6.nupkg.sha512",
     "C:\\Users\\cheth\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.24\\microsoft.windowsdesktop.app.ref.6.0.24.nupkg.sha512",
     "C:\\Users\\cheth\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.24\\microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
     "C:\\Users\\cheth\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.24\\microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512",
