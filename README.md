@@ -32,3 +32,4 @@ useful so I am continuing to develop it and hopefully it will eventually be of s
 - Convert .pngs to .lmp, .wads, or .sprs or add as a texture to an .mdl
 - Import .wavs
 - Support Quake2/Valve paks/files as well
+- Make the UI all nice and spiffy
