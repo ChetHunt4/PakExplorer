@@ -5,8 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PakExplorer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="PakXStractor" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open Pak" Click="menuItem_OpenProjectClick"/>
+                <Separator />
+                <MenuItem Header="_Quit" Click="menuItem_QuitClick"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Orientation="Horizontal" MinWidth="120" HorizontalAlignment="Left">
+            <ListView MinWidth="120" x:Name="lstPakFile" SelectionChanged="lstSelection_Changed">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView MinWidth="120" x:Name="lstWadFile" SelectionChanged="lstWadSelection_Changed" Visibility="Collapsed">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="lblFilename" Content="Filename: " Visibility="Collapsed"/>
+            </StackPanel>
+            <StackPanel x:Name="pnlPalette" Orientation="Vertical" Visibility="Collapsed">
+                <Label x:Name="lblPalette" Content="Palette loading..."/>
+            </StackPanel>
+            <StackPanel x:Name="pnlLoadPalette" Orientation="Vertical" Visibility="Collapsed">
+                <Button Content="Find Palette in Pak..." HorizontalAlignment="Center" Click="btnFindPalette_Click" Padding="10"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" MaxHeight="380">
+                <StackPanel x:Name="pnlImage" Orientation="Horizontal" Visibility="Collapsed" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" MinWidth="200">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" x:Name="pnlModelTextures" Visibility="Collapsed">
+                            <Label Content="Textures: "></Label>
+                            <ComboBox x:Name="cmbModelTextures" MinWidth="120" SelectionChanged="cmbModelTexture_SelectionChanged" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                            <Label Content="Width: "/>
+                            <TextBox x:Name="txtWidth" VerticalAlignment="Center" Width="100"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                            <Label Content="Height: "/>
+                            <TextBox x:Name="txtHeight" VerticalAlignment="Center" Width="100"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" x:Name="pnlMdlDetails" Visibility="Collapsed">
+                            <Label Content="Vertices: " x:Name="lblVerts" />
+                            <Label Content="Frames: " x:Name="lblFrames"/>
+                        </StackPanel>
 
-    </Grid>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                            <Button x:Name="btnExportGfx" Content="Export Graphic" VerticalAlignment="Bottom" Click="btnExportGfx_Click"/>
+                            <Button x:Name="btnExportModelToObj" Content="Export Obj" VerticalAlignment="Bottom" Click="btnExportModelToObj_Click" Visibility="Collapsed"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Image x:Name="iImage" MinWidth="200" MinHeight="200" MaxWidth="400" MaxHeight="400"></Image>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="pnlMap" Orientation="Horizontal" HorizontalAlignment="Left" Visibility="Collapsed">
+                    <Button Content="Export Map Textures" Click="btnExportMapTextures_Click"/>
+                    <Button Content="Export Entities as Json" Click="btnExportMapEntities_Click" />
+                    <Button Content="Export Map to .Obj" Click="btnExportMapToObj_Click" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
 </Window>
